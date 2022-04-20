@@ -29,7 +29,8 @@ public class Demo1 {
 		driver.findElement(By.id("input_password")).sendKeys("admin123");
 		
 		driver.findElement(By.id("input_go")).click();
-		driver.close();
+		String war = driver.findElement(By.xpath("//div[contains(text(),'Access')]")).getText();
+		System.out.println(war);
 		
 	}
 
